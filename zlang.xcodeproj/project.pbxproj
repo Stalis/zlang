@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		51C021332356E94300DF21B3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C021322356E94300DF21B3 /* main.cpp */; };
+		51C021462356F4A200DF21B3 /* ZlangScanner.yy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C021442356F4A200DF21B3 /* ZlangScanner.yy.cpp */; };
+		51C0214F2357003800DF21B3 /* libreflex.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C0214E2357003800DF21B3 /* libreflex.so */; };
+		51C021502357003800DF21B3 /* libreflex.so in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 51C0214E2357003800DF21B3 /* libreflex.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		51C0215E2357106000DF21B3 /* ZlangParser.yy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C021412356F15600DF21B3 /* ZlangParser.yy.cpp */; };
+		51C02162235729CA00DF21B3 /* AstNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C02160235729CA00DF21B3 /* AstNode.cpp */; };
+		51C0216523572DCB00DF21B3 /* TranslationUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C0216323572DCB00DF21B3 /* TranslationUnit.cpp */; };
+		51C021682357347500DF21B3 /* NameScope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C021662357347500DF21B3 /* NameScope.cpp */; };
+		51C0216C235746DF00DF21B3 /* QualifiedId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C0216A235746DF00DF21B3 /* QualifiedId.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +28,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		51C021512357003800DF21B3 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				51C021502357003800DF21B3 /* libreflex.so in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		51C0212F2356E94300DF21B3 /* zlang */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = zlang; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C021322356E94300DF21B3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		51C0213A2356EA6C00DF21B3 /* zlang.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; path = zlang.y; sourceTree = "<group>"; };
+		51C0213B2356EA6C00DF21B3 /* zlang.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = zlang.l; sourceTree = "<group>"; };
+		51C0213E2356EAC100DF21B3 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		51C021402356F15600DF21B3 /* location.yy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = location.yy.hpp; sourceTree = "<group>"; };
+		51C021412356F15600DF21B3 /* ZlangParser.yy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZlangParser.yy.cpp; sourceTree = "<group>"; };
+		51C021422356F15600DF21B3 /* ZlangParser.yy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ZlangParser.yy.hpp; sourceTree = "<group>"; };
+		51C021442356F4A200DF21B3 /* ZlangScanner.yy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZlangScanner.yy.cpp; sourceTree = "<group>"; };
+		51C021452356F4A200DF21B3 /* ZlangScanner.yy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ZlangScanner.yy.hpp; sourceTree = "<group>"; };
+		51C0214E2357003800DF21B3 /* libreflex.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreflex.so; path = ../../../../../../../usr/local/lib/libreflex.so; sourceTree = "<group>"; };
+		51C02153235700B100DF21B3 /* main.zl */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.zl; sourceTree = "<group>"; };
+		51C02154235700B100DF21B3 /* point.zl */ = {isa = PBXFileReference; lastKnownFileType = text; path = point.zl; sourceTree = "<group>"; };
+		51C02155235700B100DF21B3 /* point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = point.h; sourceTree = "<group>"; };
+		51C02156235700B100DF21B3 /* point.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = point.c; sourceTree = "<group>"; };
+		51C02157235700B100DF21B3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		51C02160235729CA00DF21B3 /* AstNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AstNode.cpp; sourceTree = "<group>"; };
+		51C02161235729CA00DF21B3 /* AstNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AstNode.hpp; sourceTree = "<group>"; };
+		51C0216323572DCB00DF21B3 /* TranslationUnit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TranslationUnit.cpp; sourceTree = "<group>"; };
+		51C0216423572DCB00DF21B3 /* TranslationUnit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TranslationUnit.hpp; sourceTree = "<group>"; };
+		51C021662357347500DF21B3 /* NameScope.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NameScope.cpp; sourceTree = "<group>"; };
+		51C021672357347500DF21B3 /* NameScope.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NameScope.hpp; sourceTree = "<group>"; };
+		51C0216A235746DF00DF21B3 /* QualifiedId.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QualifiedId.cpp; sourceTree = "<group>"; };
+		51C0216B235746DF00DF21B3 /* QualifiedId.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QualifiedId.hpp; sourceTree = "<group>"; };
+		51C0216D235749A200DF21B3 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C0214F2357003800DF21B3 /* libreflex.so in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +84,13 @@
 		51C021262356E94200DF21B3 = {
 			isa = PBXGroup;
 			children = (
+				51C0216D235749A200DF21B3 /* info.plist */,
+				51C0215F235729A600DF21B3 /* ast */,
+				51C021522357006C00DF21B3 /* examples */,
+				51C021392356EA1B00DF21B3 /* parser */,
 				51C021312356E94300DF21B3 /* zlang */,
 				51C021302356E94300DF21B3 /* Products */,
+				51C0214C2357000A00DF21B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +110,56 @@
 			path = zlang;
 			sourceTree = "<group>";
 		};
+		51C021392356EA1B00DF21B3 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				51C021442356F4A200DF21B3 /* ZlangScanner.yy.cpp */,
+				51C021452356F4A200DF21B3 /* ZlangScanner.yy.hpp */,
+				51C021402356F15600DF21B3 /* location.yy.hpp */,
+				51C021412356F15600DF21B3 /* ZlangParser.yy.cpp */,
+				51C021422356F15600DF21B3 /* ZlangParser.yy.hpp */,
+				51C0213B2356EA6C00DF21B3 /* zlang.l */,
+				51C0213A2356EA6C00DF21B3 /* zlang.y */,
+				51C0213E2356EAC100DF21B3 /* Makefile */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+		51C0214C2357000A00DF21B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51C0214E2357003800DF21B3 /* libreflex.so */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51C021522357006C00DF21B3 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				51C02157235700B100DF21B3 /* main.c */,
+				51C02153235700B100DF21B3 /* main.zl */,
+				51C02156235700B100DF21B3 /* point.c */,
+				51C02155235700B100DF21B3 /* point.h */,
+				51C02154235700B100DF21B3 /* point.zl */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		51C0215F235729A600DF21B3 /* ast */ = {
+			isa = PBXGroup;
+			children = (
+				51C02160235729CA00DF21B3 /* AstNode.cpp */,
+				51C02161235729CA00DF21B3 /* AstNode.hpp */,
+				51C0216323572DCB00DF21B3 /* TranslationUnit.cpp */,
+				51C0216423572DCB00DF21B3 /* TranslationUnit.hpp */,
+				51C021662357347500DF21B3 /* NameScope.cpp */,
+				51C021672357347500DF21B3 /* NameScope.hpp */,
+				51C0216A235746DF00DF21B3 /* QualifiedId.cpp */,
+				51C0216B235746DF00DF21B3 /* QualifiedId.hpp */,
+			);
+			path = ast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -69,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51C021362356E94300DF21B3 /* Build configuration list for PBXNativeTarget "zlang" */;
 			buildPhases = (
+				51C0215D2357100500DF21B3 /* Run Script */,
 				51C0212B2356E94300DF21B3 /* Sources */,
 				51C0212C2356E94300DF21B3 /* Frameworks */,
 				51C0212D2356E94300DF21B3 /* CopyFiles */,
+				51C021512357003800DF21B3 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -114,12 +214,39 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51C0215D2357100500DF21B3 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd parser\nmake clean && make\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		51C0212B2356E94300DF21B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C0215E2357106000DF21B3 /* ZlangParser.yy.cpp in Sources */,
+				51C0216C235746DF00DF21B3 /* QualifiedId.cpp in Sources */,
+				51C021462356F4A200DF21B3 /* ZlangScanner.yy.cpp in Sources */,
+				51C02162235729CA00DF21B3 /* AstNode.cpp in Sources */,
 				51C021332356E94300DF21B3 /* main.cpp in Sources */,
+				51C0216523572DCB00DF21B3 /* TranslationUnit.cpp in Sources */,
+				51C021682357347500DF21B3 /* NameScope.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +259,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -176,6 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/llvm/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -190,7 +318,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -228,6 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/opt/llvm/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -238,9 +367,19 @@
 		51C021372356E94300DF21B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20191016;
 				DEVELOPMENT_TEAM = 8N9CX3536Y;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/llvm/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
+				MARKETING_VERSION = 0.0.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stalis.zlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,9 +387,19 @@
 		51C021382356E94300DF21B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20191016;
 				DEVELOPMENT_TEAM = 8N9CX3536Y;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/llvm/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
+				MARKETING_VERSION = 0.0.1;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stalis.zlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

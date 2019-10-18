@@ -7,3 +7,19 @@
 //
 
 #include "TranslationUnit.hpp"
+
+namespace Zlang {
+namespace Ast {
+
+TranslationUnit::TranslationUnit() : AstNode() {
+}
+
+std::string &TranslationUnit::getName() {
+    return _name;
+}
+
+void TranslationUnit::addChild(AstNode * node) {
+    _children.push_back(node);
+}
+}
+}

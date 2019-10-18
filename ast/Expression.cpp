@@ -3,3 +3,8 @@
 //
 
 #include "Expression.hpp"
+
+namespace Zlang {
+namespace Ast {
+} //!Ast
+} //!Zlang

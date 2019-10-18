@@ -9,6 +9,20 @@
 #ifndef NameScope_hpp
 #define NameScope_hpp
 
-#include <stdio.h>
+#include <vector>
+#include "QualifiedId.hpp"
 
+namespace Zlang {
+namespace Ast {
+
+class Scope {
+public:
+    bool addSymbol(QualifiedId symbolName);
+    bool removeSymbol(QualifiedId &symbolName);
+
+private:
+    std::vector<QualifiedId> _symbols;
+};
+}
+}
 #endif /* NameScope_hpp */

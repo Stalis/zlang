@@ -9,6 +9,24 @@
 #ifndef TranslationUnit_hpp
 #define TranslationUnit_hpp
 
-#include <stdio.h>
+#include <string>
+#include <vector>
+#include "AstNode.hpp"
+
+namespace Zlang {
+namespace Ast {
+
+class TranslationUnit : public AstNode {
+public:
+    TranslationUnit();
+    std::string &getName();
+    void addChild(AstNode * node);
+
+private:
+    std::string _name;
+    std::vector<AstNode *> _children;
+};
+} //!Ast
+} //!Zlang
 
 #endif /* TranslationUnit_hpp */

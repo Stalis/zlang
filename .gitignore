@@ -1,1 +1,3 @@
-/parser/ZlangParser.yy.hpp
+*.yy.*
+/cmake-build*
+/.idea

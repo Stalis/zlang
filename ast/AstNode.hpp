@@ -9,6 +9,16 @@
 #ifndef AstNode_hpp
 #define AstNode_hpp
 
-#include <stdio.h>
+#include <llvm/IR/Value.h>
 
+namespace Zlang {
+namespace Ast {
+class AstNode {
+public:
+    virtual ~AstNode() = default;
+
+    virtual llvm::Value * codeGen() { return nullptr; }
+};
+}
+}
 #endif /* AstNode_hpp */

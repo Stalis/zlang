@@ -5,7 +5,14 @@
 #ifndef ZLANG_AST_EXPRESSION_HPP
 #define ZLANG_AST_EXPRESSION_HPP
 
-class Expression {
+#include "AstNode.hpp"
+
+namespace Zlang {
+namespace Ast {
+
+class Expression : public AstNode {
 };
+} //!Ast
+} //!Zlang
 
 #endif //ZLANG_AST_EXPRESSION_HPP
